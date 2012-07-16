@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Explorer v2.0 by Mergesoft (www.mergesoft.com)-->
+<userProfile>
+	<userInfo	userName="test"		password="123456"				email="test@test.com"	></userInfo>
+	<phoneInfo	brand="LG"			model="LU6200"				rom="ice 4.04"		></phoneInfo>
+</userProfile>

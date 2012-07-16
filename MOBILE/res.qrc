@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/wizard/pic">
+        <file>res/wizardBackGroud.png</file>
+        <file>res/loading1.gif</file>
+        <file>res/loading2.gif</file>
+        <file>res/loading3.gif</file>
+        <file>res/backgroudwhite.png</file>
+    </qresource>
+</RCC>

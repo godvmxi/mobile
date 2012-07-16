@@ -1,0 +1,33 @@
+<!-- 这里写注释-->
+<!-- type 命令类型-->
+<!-- 1：cmd-->
+<!-- 2：状态栏-->
+<!-- 3：对话框提示-->
+<!-- 4：预留-->
+<!-- errorCheckType  命令执行后的错误检查方法-->
+<!-- 1：按照出错字符串cmd中提取-->
+<!-- 2：预留-->
+<!-- errorString  命令执行后出错后的返回值-->
+<!-- 1：cmd-->
+<rootnode attribute="" backup_plan_num="3" default_plan_index="1">
+	<bk_1 name="备份方案一" cmdlist="0">
+		<cmd type="3" errorCheckType="0" timeOut="0" cmd="请将手机连接到电脑，并打开usb调试模式，确保sd卡空间有200M以上,电脑有4G以上空间" errorString=""/>
+		<cmd type="1" errorCheckType="0" timeOut="0" cmd="adb wait_for_device" errorString=""/>
+		<cmd type="1" errorCheckType="0" timeOut="0" errorString="" cmd="adb shell su -c &quot;dd if=/dev/block/mmcblk0 of=/sdcard/001.img bs=1024000 count=20 skip=0&quot;"/>
+		<cmd type="1" errorCheckType="1" timeOut="0" errorString="" cmd="adb pull /sdcard/001.img backup/001.img"/>
+		<cmd type="1" errorCheckType="1" timeOut="0" errorString="" cmd="adb shell su -c &quot;rm  /sdcard/001.img&quot;"/>
+		<cmd type="1" errorCheckType="0" timeOut="0" errorString="" cmd="adb shell su -c &quot;dd if=/dev/block/mmcblk0 of=/sdcard/002.img bs=1024000 count=20 skip=20&quot;"/>
+		<cmd type="1" errorCheckType="1" timeOut="0" errorString="" cmd="adb pull /sdcard/002.img backup/002.img"/>
+		<cmd type="1" errorCheckType="1" timeOut="0" errorString="" cmd="adb shell su -c &quot;rm  /sdcard/002.img&quot;"/>
+		<cmd type="1" errorCheckType="0" timeOut="0" errorString="" cmd="adb shell su -c &quot;dd if=/dev/block/mmcblk0 of=/sdcard/003.img bs=1024000 count=20 skip=40&quot;"/>
+		<cmd type="1" errorCheckType="1" timeOut="0" errorString="" cmd="adb pull /sdcard/003.img backup/003.img"/>
+		<cmd type="1" errorCheckType="1" timeOut="0" errorString="" cmd="adb shell su -c &quot;rm  /sdcard/003.img&quot;"/>
+		<cmd type="1" errorCheckType="0" timeOut="0" errorString="" cmd="adb shell su -c &quot;dd if=/dev/block/mmcblk0 of=/sdcard/004.img bs=1024000 count=20 skip=60&quot;"/>
+		<cmd type="1" errorCheckType="1" timeOut="0" errorString="" cmd="adb pull /sdcard/004.img backup/004.img"/>
+		<cmd type="1" errorCheckType="1" timeOut="0" errorString="" cmd="adb shell su -c &quot;rm  /sdcard/004.img&quot;"/>
+	</bk_1>
+	<bk_2 name="备份方案二" cmdlist="">
+	</bk_2>
+	<bk_3 name="备份方案三" cmdlist="">
+	</bk_3>
+</rootnode>
