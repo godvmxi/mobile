@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Explorer v2.0 by Mergesoft (www.mergesoft.com)-->
+<phoneRoot>
+	<phoneBrand brandID="0" brandName="其他" brandBrife="">
+		<model modelID="0"		modelName="其他"					modelDetail="LTE 4.5"				></model>
+	</phoneBrand>
+	<phoneBrand brandID="1" brandBrife="" brandName="三星">
+		<model modelID="0"		modelName="其他"					modelDetail="LTE 4.5"				></model>
+		<model modelID="1"		modelName="e110s"					modelDetail="LTE 4.5"				></model>
+		<model modelID="2"		modelName="e120l.s.k"				modelDetail="LTE 4.5"				></model>
+		<model modelID="3"		modelName="e160l.s.k"				modelDetail="LTE 4.5"				></model>
+		<model modelID="4"		modelName="i727"				modelDetail="LTE 4.5"				></model>
+		<model modelID="5"		modelName="t989"				modelDetail="LTE 4.5"				></model>
+	</phoneBrand>
+	<phoneBrand brandID="2" brandName="小米" brandBrife="">
+		<model modelID="0"		modelName="其他"					modelDetail="LTE 4.5"				></model>
+		<model modelID="1"		modelName="MIONE"					modelDetail="雷老板的手机"			></model>
+	</phoneBrand>
+	<phoneBrand brandID="3" brandName="LG" brandBrife="">
+		<model modelID="0"		modelName="其他"					modelDetail="LTE 4.5" ></model>
+		<model modelID="1"		modelName="LU6200"					modelDetail="韩国LG电信的定制机"	></model>
+		<model modelID="2"		modelName="SU640"					modelDetail="韩国SK电信的定制机"	></model>
+		<model modelID="3"		modelName="VS920"					modelDetail="LTE 4.5"				></model>
+		<model modelID="4"		modelName="VS930"					modelDetail="加拿大Bell定制机"		></model>
+		<model modelID="5"		modelName="P936"					modelDetail="LTE 4.5"				></model>
+	</phoneBrand>
+
+	<phoneBrand brandID="4" brandName="泛泰" brandBrife="">
+		<model modelID="0"		modelName="其他"					modelDetail="LTE 4.5"				></model>
+		<model modelID="1"		modelName="a800s"					modelDetail="雷老板的手机"			></model>
+		<model modelID="2"		modelName="a810"					modelDetail="雷老板的手机"			></model>
+		<model modelID="3"		modelName="a820"					modelDetail="雷老板的手机"			></model>
+	</phoneBrand>
+
+</phoneRoot>
