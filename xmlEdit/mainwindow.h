@@ -6,10 +6,38 @@
 #include <QDomDocument>
 #include <QFile>
 #include <QFileDialog>
+#include <QMessageBox>
 
 namespace Ui {
     class MainWindow;
 }
+
+typedef struct{
+    //basic
+    QString planName;
+    QString position;
+
+
+    quint64 start;
+    quint64 end;
+    quint64 block;
+    quint64 fileSize;
+
+    quint64 fileNumber;
+    quint64 tempPosition;//
+
+}FLASH_INFO;
+typedef struct{
+
+    QString brand;
+    QString model;
+    quint64     flashSize;
+    bool plan1;
+    bool plan2;
+    bool plan3;
+
+}MOBILE_INFO;
+
 
 class MainWindow : public QMainWindow
 {
@@ -22,10 +50,15 @@ public:
 private:
     Ui::MainWindow *ui;
     QDomDocument xml;
+    FLASH_INFO plan1,plan2,plan3;
+    MOBILE_INFO mobile;
+    bool getParaInfo(void);
+    bool calPlanData(int plan);
 
 private slots:
     void on_pushButton_para_check_clicked();
     void on_pushButton_build_xml_clicked();
+    void enableALL(bool type);
 };
 
 #endif // MAINWINDOW_H

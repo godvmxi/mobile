@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>741</width>
-    <height>469</height>
+    <height>500</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -48,6 +48,9 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;备份单位，每个BLOCK的大小&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
+     <property name="currentIndex">
+      <number>4</number>
+     </property>
      <item>
       <property name="text">
        <string>0.5K</string>
@@ -76,6 +79,11 @@ p, li { white-space: pre-wrap; }
      <item>
       <property name="text">
        <string>10M</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>100M</string>
       </property>
      </item>
     </widget>
@@ -259,6 +267,9 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;备份单位，每个BLOCK的大小&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
+     <property name="currentIndex">
+      <number>4</number>
+     </property>
      <item>
       <property name="text">
        <string>0.5K</string>
@@ -287,6 +298,11 @@ p, li { white-space: pre-wrap; }
      <item>
       <property name="text">
        <string>10M</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>100M</string>
       </property>
      </item>
     </widget>
@@ -376,7 +392,7 @@ p, li { white-space: pre-wrap; }
     <widget class="QLabel" name="label_15">
      <property name="geometry">
       <rect>
-       <x>550</x>
+       <x>560</x>
        <y>40</y>
        <width>61</width>
        <height>16</height>
@@ -395,7 +411,7 @@ p, li { white-space: pre-wrap; }
     <widget class="QComboBox" name="comboBox_filesize_2">
      <property name="geometry">
       <rect>
-       <x>620</x>
+       <x>630</x>
        <y>40</y>
        <width>69</width>
        <height>22</height>
@@ -470,6 +486,9 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;备份单位，每个BLOCK的大小&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
+     <property name="currentIndex">
+      <number>4</number>
+     </property>
      <item>
       <property name="text">
        <string>0.5K</string>
@@ -498,6 +517,11 @@ p, li { white-space: pre-wrap; }
      <item>
       <property name="text">
        <string>10M</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>100M</string>
       </property>
      </item>
     </widget>
@@ -581,7 +605,7 @@ p, li { white-space: pre-wrap; }
     <widget class="QLabel" name="label_16">
      <property name="geometry">
       <rect>
-       <x>550</x>
+       <x>560</x>
        <y>40</y>
        <width>61</width>
        <height>16</height>
@@ -600,7 +624,7 @@ p, li { white-space: pre-wrap; }
     <widget class="QComboBox" name="comboBox_filesize_3">
      <property name="geometry">
       <rect>
-       <x>620</x>
+       <x>630</x>
        <y>40</y>
        <width>69</width>
        <height>22</height>
@@ -645,7 +669,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>510</x>
-      <y>380</y>
+      <y>410</y>
       <width>91</width>
       <height>31</height>
      </rect>
@@ -658,7 +682,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>120</x>
-      <y>380</y>
+      <y>410</y>
       <width>91</width>
       <height>31</height>
      </rect>
@@ -685,7 +709,7 @@ p, li { white-space: pre-wrap; }
      </property>
     </item>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="lineEdit_memory">
     <property name="geometry">
      <rect>
       <x>230</x>
@@ -717,7 +741,7 @@ p, li { white-space: pre-wrap; }
      <string>手机内存(MB)</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="lineEdit_brand">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -726,8 +750,11 @@ p, li { white-space: pre-wrap; }
       <height>20</height>
      </rect>
     </property>
+    <property name="text">
+     <string>LG</string>
+    </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
+   <widget class="QLineEdit" name="lineEdit_model">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -735,6 +762,9 @@ p, li { white-space: pre-wrap; }
       <width>81</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="text">
+     <string>LU6200</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_11">
@@ -775,7 +805,7 @@ p, li { white-space: pre-wrap; }
      <string>手机品牌</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox">
+   <widget class="QCheckBox" name="checkBox_1">
     <property name="geometry">
      <rect>
       <x>360</x>
@@ -815,6 +845,9 @@ p, li { white-space: pre-wrap; }
     <property name="text">
      <string>备份方案二</string>
     </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QCheckBox" name="checkBox_3">
     <property name="geometry">
@@ -833,6 +866,9 @@ p, li { white-space: pre-wrap; }
     </property>
     <property name="text">
      <string>备份方案三</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="label_13">
@@ -858,7 +894,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>310</x>
-      <y>380</y>
+      <y>410</y>
       <width>91</width>
       <height>31</height>
      </rect>
