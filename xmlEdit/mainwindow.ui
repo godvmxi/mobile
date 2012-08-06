@@ -363,7 +363,7 @@ p, li { white-space: pre-wrap; }
       </rect>
      </property>
      <property name="text">
-      <string>0</string>
+      <string>29</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_stop_plan_2">
@@ -629,7 +629,7 @@ p, li { white-space: pre-wrap; }
       </rect>
      </property>
      <property name="text">
-      <string>4</string>
+      <string>50</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_stop_plan_3">
@@ -642,7 +642,7 @@ p, li { white-space: pre-wrap; }
       </rect>
      </property>
      <property name="text">
-      <string>2048</string>
+      <string>350</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_7">

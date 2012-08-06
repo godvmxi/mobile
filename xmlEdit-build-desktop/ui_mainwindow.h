@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Mon Aug 6 15:27:26 2012
+** Created: Mon Aug 6 16:50:36 2012
 **      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -352,7 +352,7 @@ public:
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:14pt;\">\345\244\207\344\273\275\345\215\225\344\275\215\357\274\214\346\257\217\344\270\252BLOCK\347\232\204\345\244\247\345\260\217</span></p></body></html>", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
-        lineEdit_start_plan_2->setText(QApplication::translate("MainWindow", "0", 0, QApplication::UnicodeUTF8));
+        lineEdit_start_plan_2->setText(QApplication::translate("MainWindow", "29", 0, QApplication::UnicodeUTF8));
         lineEdit_stop_plan_2->setText(QApplication::translate("MainWindow", "2048", 0, QApplication::UnicodeUTF8));
         label_4->setText(QApplication::translate("MainWindow", "\345\274\200\345\247\213\345\234\260\345\235\200", 0, QApplication::UnicodeUTF8));
         label_5->setText(QApplication::translate("MainWindow", "\347\273\223\346\235\237\345\234\260\345\235\200", 0, QApplication::UnicodeUTF8));
@@ -392,8 +392,8 @@ public:
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:14pt;\">\345\244\207\344\273\275\345\215\225\344\275\215\357\274\214\346\257\217\344\270\252BLOCK\347\232\204\345\244\247\345\260\217</span></p></body></html>", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
-        lineEdit_start_plan_3->setText(QApplication::translate("MainWindow", "4", 0, QApplication::UnicodeUTF8));
-        lineEdit_stop_plan_3->setText(QApplication::translate("MainWindow", "2048", 0, QApplication::UnicodeUTF8));
+        lineEdit_start_plan_3->setText(QApplication::translate("MainWindow", "50", 0, QApplication::UnicodeUTF8));
+        lineEdit_stop_plan_3->setText(QApplication::translate("MainWindow", "350", 0, QApplication::UnicodeUTF8));
         label_7->setText(QApplication::translate("MainWindow", "\345\274\200\345\247\213\345\234\260\345\235\200", 0, QApplication::UnicodeUTF8));
         label_8->setText(QApplication::translate("MainWindow", "\347\273\223\346\235\237\345\234\260\345\235\200", 0, QApplication::UnicodeUTF8));
         label_9->setText(QApplication::translate("MainWindow", "block\345\244\247\345\260\217", 0, QApplication::UnicodeUTF8));

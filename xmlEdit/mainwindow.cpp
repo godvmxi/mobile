@@ -18,10 +18,12 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_build_xml_clicked()
 {
-    QDomElement root,child,element,plan,cmd;
+    QDomDocument xml;
+    QDomElement root,child,element,plan,cmd,plan1;
     QDomAttr attr;
+
     xml.clear();
-    root = this->xml.createElement("backupCmd");
+    root = xml.createElement("backupCmd");
     attr = xml.createAttribute("attribute");
     attr.setNodeValue(tr(""));
     root.setAttributeNodeNS(attr);
@@ -41,22 +43,23 @@ void MainWindow::on_pushButton_build_xml_clicked()
     attr.setNodeValue(tr("1"));
     root.setAttributeNodeNS(attr);
 
-    this->xml.appendChild(root);
+    xml.appendChild(root);
 
     //root node set ok
 
     if(this->mobile.plan1){
-        plan = xml.createElement("bk_1");
+        plan1 = xml.createElement("bk_1");
 
         attr = xml.createAttribute("name");
         attr.setNodeValue(tr("back_up_plan_1"));
-        plan.setAttributeNodeNS(attr);
+        plan1.setAttributeNodeNS(attr);
         attr = xml.createAttribute("cmdlist");
         attr.setNodeValue(tr("0"));
-        plan.setAttributeNodeNS(attr);//creat plan
-        generalCmdXml(&this->plan1,&plan,&root);
+        plan1.setAttributeNodeNS(attr);//creat plan
+        generalCmdXml(&this->plan1,&plan1,&root);
+        root.appendChild(plan1);
     }
-    root.appendChild(plan);
+
     if(this->mobile.plan2){
         plan = xml.createElement("bk_2");
         attr = xml.createAttribute("name");
@@ -65,9 +68,10 @@ void MainWindow::on_pushButton_build_xml_clicked()
         attr = xml.createAttribute("cmdlist");
         attr.setNodeValue(tr("0"));
         plan.setAttributeNodeNS(attr);//creat plan
-        generalCmdXml(&this->plan1,&plan,&root);
+        generalCmdXml(&this->plan2,&plan,&root);
+        root.appendChild(plan);
     }
-    root.appendChild(plan);
+
 
     if(this->mobile.plan3){
         plan = xml.createElement("bk_3");
@@ -78,20 +82,23 @@ void MainWindow::on_pushButton_build_xml_clicked()
         attr = xml.createAttribute("cmdlist");
         attr.setNodeValue(tr("0"));
         plan.setAttributeNodeNS(attr);//creat plan
-        generalCmdXml(&this->plan1,&plan,&root);
+        generalCmdXml(&this->plan3,&plan,&root);
+        root.appendChild(plan);
     }
-    root.appendChild(plan);
 
+
+    QString xmlName;
+    xmlName.sprintf("./%s_%s.xml",this->mobile.brand.toLatin1().data(),this->mobile.model.toLatin1().data());
 
     QString fileName = QFileDialog::getSaveFileName(this, tr("Save File"),
-                                                    "./",
+                                                    xmlName,
                                                     tr("XML files (*.xml);;all files (*.*)"));
     qDebug()<<fileName;
     QFile *file = new QFile(fileName);
-    if(!file->open(QIODevice::ReadWrite)){
+    if(!file->open(QIODevice::ReadWrite|QIODevice::Truncate)){
         qDebug()<<"文件打开错误";
     }
-//    file->resize(0);
+ //   file->resize(0);
     QTextStream out(file);
     xml.save(out,4);
     file->close();
@@ -422,25 +429,6 @@ bool MainWindow::generalCmdXml(FLASH_INFO *des,QDomElement *child,QDomElement *r
     attr.setNodeValue(tr("1"));
     cmd.setAttributeNodeNS(attr);
     attr = xml.createAttribute("errorCheckType");
-    attr.setNodeValue(tr("0"));
-    cmd.setAttributeNodeNS(attr);
-    attr = xml.createAttribute("timeOut");
-    attr.setNodeValue(tr("300"));
-    cmd.setAttributeNodeNS(attr);
-    attr = xml.createAttribute("errorString");
-    attr.setNodeValue(tr("error"));
-    cmd.setAttributeNodeNS(attr);
-    attr = xml.createAttribute("cmd");
-    attr.setNodeValue(tr("adb wait-for-device"));
-    cmd.setAttributeNodeNS(attr);
-    ////end add a cmd list
-    ////add add cmd list
-    cmd = xml.createElement("cmd");
-    child->appendChild(cmd);
-    attr = xml.createAttribute("type");
-    attr.setNodeValue(tr("1"));
-    cmd.setAttributeNodeNS(attr);
-    attr = xml.createAttribute("errorCheckType");
     attr.setNodeValue(tr("1"));
     cmd.setAttributeNodeNS(attr);
     attr = xml.createAttribute("timeOut");
@@ -483,10 +471,14 @@ bool MainWindow::generalCmdXml(FLASH_INFO *des,QDomElement *child,QDomElement *r
     quint64 count = fileSize / block;
 
     for(quint64 i = 0;i < des->fileNumber;i++){
+//        qDebug()<<"current   "<<count <<"-->"<<skip;
         fileName.clear();
         fileName.sprintf("%s_%d.moorc",des->planName.toLatin1().data(),skip);
         adbCmd.clear();
-        adbCmd.sprintf("adb shell su -c \" dd if=/dev/block/mmcblk0 of=/%s/moorc/%s bs=%d count=%d skip=%d\"",tempDevice.toLatin1().data(),fileName.toLatin1().data(),block,count,skip);
+        qDebug()<<"current   "<<count <<"-->"<<skip;
+        QByteArray a=tempDevice.toLatin1();
+        QByteArray b=fileName.toLatin1();
+        adbCmd.sprintf("adb shell su -c \" dd if=/dev/block/mmcblk0 of=/%s/moorc/%s bs=%lld count=%lld skip=%lld\"",tempDevice.toLatin1().data(),b.data(),block,count,skip);
         qDebug()<<adbCmd;
         copyCmd.clear();
         copyCmd.sprintf("adb pull /%s/moorc/%s moorc/%s/%s",tempDevice.toLatin1().data(),fileName.toLatin1().data(),desDir.toLatin1().data(),fileName.toLatin1().data());
@@ -495,6 +487,7 @@ bool MainWindow::generalCmdXml(FLASH_INFO *des,QDomElement *child,QDomElement *r
         clearCmd.sprintf("adb shell su -c \"rm -rf /%s/moorc/%s\"",tempDevice.toLatin1().data(),fileName.toLatin1().data());
         qDebug()<<clearCmd;
         skip += count;
+
 
         ////add add cmd list
         cmd = xml.createElement("cmd");
