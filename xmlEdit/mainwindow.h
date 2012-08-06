@@ -23,6 +23,8 @@ typedef struct{
     quint64 block;
     quint64 fileSize;
 
+    quint64 tempDevice;//0:
+
     quint64 fileNumber;
     quint64 tempPosition;//
 
@@ -54,11 +56,13 @@ private:
     MOBILE_INFO mobile;
     bool getParaInfo(void);
     bool calPlanData(int plan);
+    bool generalCmdXml(FLASH_INFO *des,QDomElement *child,QDomElement *root);
 
 private slots:
     void on_pushButton_para_check_clicked();
     void on_pushButton_build_xml_clicked();
     void enableALL(bool type);
+
 };
 
 #endif // MAINWINDOW_H

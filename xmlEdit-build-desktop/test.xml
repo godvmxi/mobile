@@ -1,6 +1,161 @@
-<rootNode>
-    <bk_1>
-        <cmd attr3="attrValue3" attr1="attrValue1" attr2="attrValue2"/>
+<backupCmd attribute="" backup_plan_num="3" default_plan_index="1">
+    <bk_1 name="back_up_plan_1" cmdlist="0">
+        <cmd errorString="" errorCheckType="0" cmd="请打开USB，并将手机连接到电脑，确保设备内存和SD卡有200M以上的空间&#xa;" type="3" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="0" cmd="adb wait-for-device" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb wait-for-device" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_0.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_0.moorc moorc/plan_1/plan_1_0.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_0.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_128.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_128.moorc moorc/plan_1/plan_1_128.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_128.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_256.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_256.moorc moorc/plan_1/plan_1_256.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_256.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_384.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_384.moorc moorc/plan_1/plan_1_384.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_384.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_512.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_512.moorc moorc/plan_1/plan_1_512.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_512.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_640.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_640.moorc moorc/plan_1/plan_1_640.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_640.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_768.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_768.moorc moorc/plan_1/plan_1_768.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_768.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_896.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_896.moorc moorc/plan_1/plan_1_896.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_896.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_1024.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_1024.moorc moorc/plan_1/plan_1_1024.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_1024.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_1152.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_1152.moorc moorc/plan_1/plan_1_1152.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_1152.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_1280.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_1280.moorc moorc/plan_1/plan_1_1280.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_1280.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_1408.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_1408.moorc moorc/plan_1/plan_1_1408.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_1408.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_1536.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_1536.moorc moorc/plan_1/plan_1_1536.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_1536.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_1664.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_1664.moorc moorc/plan_1/plan_1_1664.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_1664.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_1792.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_1792.moorc moorc/plan_1/plan_1_1792.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_1792.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_1920.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_1920.moorc moorc/plan_1/plan_1_1920.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_1920.moorc&quot;" type="1" timeOut="300"/>
     </bk_1>
-    <bk_2/>
-</rootNode>
+    <bk_2 name="back_up_plan_2" cmdlist="0">
+        <cmd errorString="" errorCheckType="0" cmd="请打开USB，并将手机连接到电脑，确保设备内存和SD卡有200M以上的空间&#xa;" type="3" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="0" cmd="adb wait-for-device" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb wait-for-device" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_0.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_0.moorc moorc/plan_1/plan_1_0.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_0.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_128.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_128.moorc moorc/plan_1/plan_1_128.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_128.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_256.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_256.moorc moorc/plan_1/plan_1_256.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_256.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_384.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_384.moorc moorc/plan_1/plan_1_384.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_384.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_512.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_512.moorc moorc/plan_1/plan_1_512.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_512.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_640.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_640.moorc moorc/plan_1/plan_1_640.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_640.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_768.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_768.moorc moorc/plan_1/plan_1_768.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_768.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_896.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_896.moorc moorc/plan_1/plan_1_896.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_896.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_1024.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_1024.moorc moorc/plan_1/plan_1_1024.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_1024.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_1152.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_1152.moorc moorc/plan_1/plan_1_1152.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_1152.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_1280.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_1280.moorc moorc/plan_1/plan_1_1280.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_1280.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_1408.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_1408.moorc moorc/plan_1/plan_1_1408.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_1408.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_1536.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_1536.moorc moorc/plan_1/plan_1_1536.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_1536.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_1664.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_1664.moorc moorc/plan_1/plan_1_1664.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_1664.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_1792.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_1792.moorc moorc/plan_1/plan_1_1792.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_1792.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_1920.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_1920.moorc moorc/plan_1/plan_1_1920.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_1920.moorc&quot;" type="1" timeOut="300"/>
+    </bk_2>
+    <bk_3 name="back_up_plan_3" cmdlist="0">
+        <cmd errorString="" errorCheckType="0" cmd="请打开USB，并将手机连接到电脑，确保设备内存和SD卡有200M以上的空间&#xa;" type="3" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="0" cmd="adb wait-for-device" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb wait-for-device" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_0.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_0.moorc moorc/plan_1/plan_1_0.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_0.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_128.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_128.moorc moorc/plan_1/plan_1_128.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_128.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_256.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_256.moorc moorc/plan_1/plan_1_256.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_256.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_384.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_384.moorc moorc/plan_1/plan_1_384.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_384.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_512.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_512.moorc moorc/plan_1/plan_1_512.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_512.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_640.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_640.moorc moorc/plan_1/plan_1_640.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_640.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_768.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_768.moorc moorc/plan_1/plan_1_768.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_768.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_896.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_896.moorc moorc/plan_1/plan_1_896.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_896.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_1024.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_1024.moorc moorc/plan_1/plan_1_1024.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_1024.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_1152.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_1152.moorc moorc/plan_1/plan_1_1152.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_1152.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_1280.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_1280.moorc moorc/plan_1/plan_1_1280.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_1280.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_1408.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_1408.moorc moorc/plan_1/plan_1_1408.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_1408.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_1536.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_1536.moorc moorc/plan_1/plan_1_1536.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_1536.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_1664.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_1664.moorc moorc/plan_1/plan_1_1664.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_1664.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_1792.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_1792.moorc moorc/plan_1/plan_1_1792.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_1792.moorc&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot; dd if=/dev/block/mmcblk0 of=/sdcard/moorc/plan_1_1920.moorc bs=1024000 count=0 skip=128&quot;" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb pull /sdcard/moorc/plan_1_1920.moorc moorc/plan_1/plan_1_1920.moorc" type="1" timeOut="300"/>
+        <cmd errorString="error" errorCheckType="1" cmd="adb shell su -c &quot;rm -rf /sdcard/moorc/plan_1_1920.moorc&quot;" type="1" timeOut="300"/>
+    </bk_3>
+</backupCmd>
